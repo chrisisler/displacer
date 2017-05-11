@@ -55,6 +55,10 @@ const flipHands = (rudiment) => rudiment
     .replace(/r/g, 'x').replace(/l/g, 'r').replace(/x/g, 'l')
     .replace(/R/g, 'X').replace(/L/g, 'R').replace(/X/g, 'L');
 
+/**
+ * @param {String} rudiment - A string like 'rlrr'.
+ * @returns {Array[String]} - A list of Strings.
+ */
 module.exports = function permuteRudiment(rudiment) {
     const len = rudiment.length;
     const isAlternating = rudiment[0] === rudiment[rudiment.length - 1];

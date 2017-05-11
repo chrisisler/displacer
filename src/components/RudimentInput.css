@@ -1,0 +1,17 @@
+.RudimentInput {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding: 12px;
+    font-size: larger;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 700px;
+}
+.RudimentInput::-webkit-input-placeholder {
+    color: #aaa;
+}

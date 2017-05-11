@@ -1,0 +1,15 @@
+.RudimentPermutations {
+    font-family: monospace;
+    list-style: none;
+    font-size: larger;
+    padding: 0;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+}
+.Permutation {
+    padding: 16px 0;
+    /* transition: color .35s ease, background-color .35s ease; */
+}.highlight-accent {
+    font-weight: bolder;
+    color: red;
+}
