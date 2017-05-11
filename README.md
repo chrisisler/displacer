@@ -1,0 +1,2 @@
+# displacer
+Rudiment permutation generator.
