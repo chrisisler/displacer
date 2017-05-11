@@ -56,14 +56,20 @@ const flipHands = (rudiment) => rudiment
     .replace(/R/g, 'X').replace(/L/g, 'R').replace(/X/g, 'L');
 
 /**
+ * @param {String} x
+ * @returns {Boolean} - If zeroth and last index are same character (case-sensitive).
+ */
+const getIsAmbidextrous = (x) => !!x && x[0] === x[x.length - 1];
+
+/**
  * @param {String} rudiment - A string like 'rlrr'.
  * @returns {Array[String]} - A list of Strings.
  */
-module.exports = function getRudimentDisplacements(rudiment) {
+const getRudimentDisplacements = (rudiment) => {
     const len = rudiment.length;
-    const isAlternating = rudiment[0] === rudiment[rudiment.length - 1];
+    const isAmbidextrous = getIsAmbidextrous(rudiment);
 
-    if (isAlternating) {
+    if (isAmbidextrous) {
         rudiment += flipHands(rudiment);
     }
 
@@ -74,8 +80,12 @@ module.exports = function getRudimentDisplacements(rudiment) {
         rudiment = getNextCycle(rudiment);
     });
 
-    if (isAlternating) {
+    if (isAmbidextrous) {
         permutations = permutations.concat(permutations.map(flipHands));
     }
     return permutations;
 };
+module.exports = {
+    getRudimentDisplacements,
+    getIsAmbidextrous
+}
