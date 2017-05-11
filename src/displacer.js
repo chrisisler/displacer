@@ -59,7 +59,7 @@ const flipHands = (rudiment) => rudiment
  * @param {String} rudiment - A string like 'rlrr'.
  * @returns {Array[String]} - A list of Strings.
  */
-module.exports = function permuteRudiment(rudiment) {
+module.exports = function getRudimentDisplacements(rudiment) {
     const len = rudiment.length;
     const isAlternating = rudiment[0] === rudiment[rudiment.length - 1];
 

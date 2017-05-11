@@ -1,34 +1,15 @@
-import { h, Component } from 'preact';
-import './RudimentInput.css';
-
-const acceptableChars = [ 'L', 'R' ];
+import { h, Component } from 'preact'
+import './RudimentInput.css'
 
 export default class RudimentInput extends Component {
-    state = { value: '' };
-
-    onChange = (event) => {
-        console.log('in onChange()');
-        const value  = event.target.value;
-        const lastChar = value[value.length - 1].topUpperCase();
-
-        if (acceptableChars.contains(lastChar)) {
-            this.setState({ value });
-        } else {
-            // Show error: 'L and R only'.
-            // TODO: Add K for kick.
-            console.log('Err: "L and R only [ TODO ]"');
-        }
-    }
-
-    render(props, state) {
+    render({ onInput }) {
         return (
             <input
                 type={'text'}
-                value={state.value}
-                onChange={this.onChange}
+                onInput={onInput}
                 placeholder={'Enter rudiment'}
                 className={'RudimentInput'}
             />
-        );
+        )
     }
 }

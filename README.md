@@ -22,5 +22,6 @@ Output
 ```
 
 ## Roadmap (TODO)
-- make it a webapp (mobile first) so it's handy to use on smartphone
 - heroku, docs, tests
+- add K for kick
+- get `now.sh` domain from zeit
