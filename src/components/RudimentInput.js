@@ -7,7 +7,8 @@ export default class RudimentInput extends Component {
             <input
                 type={'text'}
                 onInput={onInput}
-                placeholder={'Enter rudiment'}
+                onChange={this.linkState('text')}
+                placeholder={'Enter L\'s and R\'s'}
                 className={'RudimentInput'}
             />
         )
