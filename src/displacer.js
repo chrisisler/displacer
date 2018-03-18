@@ -88,4 +88,4 @@ const getRudimentDisplacements = (rudiment) => {
 module.exports = {
     getRudimentDisplacements,
     getIsAmbidextrous
-}
+};
